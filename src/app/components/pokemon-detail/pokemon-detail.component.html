@@ -1,0 +1,17 @@
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{pokemonDetail.name}}</mat-card-title>
+    <mat-card-subtitle>{{pokemonDetail.habitat}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image  [src]="pokemonDetail.imgUrl" [alt]="pokemonDetail.name">
+  <mat-card-content>
+    <h3>
+      Es un pokemon de habitat {{pokemonDetail.habitat}} que {{pokemonDetail.isBaby? "ya no es ": "aun es"}} bebe,
+      además del grupo {{pokemonDetail.eggGroup.name}}, por otro lado, Mitico: {{pokemonDetail.isMythical? "  si ":"  no"}}
+      Legendario: {{pokemonDetail.isLegendary? "  si":"  no"}}
+    </h3>
+
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,6 @@
+<mat-grid-list cols={{col}} *ngFor="let item of items | filter:page">
+  <mat-grid-tile class="mat-grid-list">
+    <app-pokemon [pokemon]="item" ></app-pokemon>
+    <button  class="btn-danger p-3" mat-button [routerLink]="['/','details',item?.id]"  (click)="detailPokemon(item.id)" >Detalles</button>
+  </mat-grid-tile>
+</mat-grid-list>
